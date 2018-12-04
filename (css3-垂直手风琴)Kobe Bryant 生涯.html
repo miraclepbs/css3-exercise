@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kobe Bryant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        * {
+           padding: 0;
+           margin: 0;
+           text-decoration: none; 
+        }
+        
+        .main {
+            /* margin: 0 auto; */
+            width: 300px;
+            font: 12px Arial, Verdana, sans-serif;
+        }
+
+        .main h2 {
+            padding: 10px;
+            position: relative;
+            
+        }
+
+        /* 制作向右三角 */
+        .main h2:before {
+            border: 8px solid #fff;
+            border-color: transparent transparent transparent #353535;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            right: 15px;
+            top: 22px;
+        }
+
+        /* 手风琴标题效果 */
+        .main h2 a {
+            background: -webkit-linear-gradient( top, #cecece, #dfdfcf);
+            display: block;/* 将子元素设为block能将撑到父元素大小*/
+            border-radius: 6px;
+            text-shadow: 2px 2px 2px #aeaeae;
+            color: #474747;
+            padding: 10px 10px;
+            text-shadow: 2px 2px 2px #aeaeae;
+        }
+
+        .main:target h2 a,
+        .main h2 a:focus,
+        .main h2 a:hover,
+        .main h2 a:active {
+            background: -webkit-linear-gradient(top, #6bb2ff, #2288dd);
+            color: #fff;
+        }
+        /* 好现在有一个问题，隐藏元素如何隐藏 */
+        .main p {
+            margin: 0;
+            height: 0;/* 高度为0，隐藏*/
+            overflow: hidden;
+            padding: 0 10px;
+            -webkit-transition: height 0.5s ease-in;
+            /* transition: height 0.5s ease-in;   */
+        }
+
+        /* 又怎么出现 */
+        .main :target p {
+            height: 100px;
+            overflow: auto;
+        }
+
+        /* 展开有三角 */
+        .main :target h2:before {
+            border-color: #fff transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="selection" id="life">
+            <h2><a href="#life">life</a></h2>
+            <p>kobe 是个厉害的人</p>
+        </div>
+        <div class="selection" id="basketball">
+            <h2><a href="#basketball">basketball</a></h2>
+            <p>他的篮球真的很厉害</p>
+        </div>
+        <div class="selection" id="family">
+            <h2><a href="#family">family</a></h2>
+            <p>媳妇靓，闺女美</p>
+        </div>
+    </div>
+</body>
+</html>
