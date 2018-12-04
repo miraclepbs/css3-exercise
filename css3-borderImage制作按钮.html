@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>border-image制作按钮</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .border-image-btn {
+            display: inline-block;
+            border: 18px solid green;
+            border-width: 0 18px;
+            border-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543941220&di=e94c4bf1a6ca078f7dab265297f8b5c8&src=http://ww1.sinaimg.cn/wap720/70436c2bjw1f2vup4p7szj210z0kuadk.jpg") 0 18 50 18;
+            -webkit-border-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543941220&di=e94c4bf1a6ca078f7dab265297f8b5c8&src=http://ww1.sinaimg.cn/wap720/70436c2bjw1f2vup4p7szj210z0kuadk.jpg") 0 18 50 18;
+            padding: 13px 10px 17px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 15px;
+            margin: 10px;
+        }
+
+        .border-image-btn:hover {
+            border-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543941220&di=e94c4bf1a6ca078f7dab265297f8b5c8&src=http://ww1.sinaimg.cn/wap720/70436c2bjw1f2vup4p7szj210z0kuadk.jpg") 50 18 0 18;
+            -webkit-border-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1543941220&di=e94c4bf1a6ca078f7dab265297f8b5c8&src=http://ww1.sinaimg.cn/wap720/70436c2bjw1f2vup4p7szj210z0kuadk.jpg") 50 18 0 18;
+            color: #000;
+            border-color: yellow;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="border-image-btn">Click ME</a>
+    <a href="#" class="border-image-btn">点我</a>
+    <a href="#" class="border-image-btn">CSS3 Border-image Button</a>
+</body>
+</html>
