@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css3-tab(checked)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+    .widget-tab input{display:none}
+    .widget-tab .widget-box ul{display:none}
+    #new:checked ~ .widget-title .new,
+    #hot:checked ~ .widget-title .hot,
+    #random:checked ~ .widget-title .random{
+        background:#F7F7F7
+}
+    #new:checked ~ .widget-box .new-list,
+    #hot:checked ~ .widget-box .hot-list,
+    #random:checked ~ .widget-box .random-list{
+        display:block
+}
+    </style>
+</head>
+<body>
+    <div class="widget widget-tab">
+        <input type="radio" name="widget-tab" id="new" checked="checked" />
+        <input type="radio" name="widget-tab" id="hot" />
+        <input type="radio" name="widget-tab" id="random" />
+        <div class="widget-title inline-block">
+            <ul>
+                <li class="new">
+                    <label for="new">最新博文</label>
+                </li>
+                <li class="hot">
+                    <label for="hot">热评博文</label>
+                </li>
+                <li class="random">
+                    <label for="random">随机博文</label>
+                </li>
+            </ul>
+        </div>
+        <div class="widget-box">
+            <ul class="new-list">
+                <li>…88…</li>
+            </ul>
+            <ul class="hot-list">
+                <li>…7777…</li>
+            </ul>
+            <ul class="random-list">
+                <li>…8898466…</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
