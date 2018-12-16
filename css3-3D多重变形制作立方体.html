@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        @keyframes spin {
+            0%{transform:rotateY(0deg)}
+            100%{transform:rotateY(360deg)}
+        }
+
+        .stage {
+            width: 300px;
+            height: 300px;
+            margin: 15px auto;
+            position: relative;
+            background:url("https://www.baidu.com/link?url=tYWptCXtQWC-M9sr2ri-HG4YLPon2OqkmHz_a5j-uQaXvqMOhqUBeE_S-QpQys8VuirFR25d6k_7MQGMPEWKg08nSgSxO_KvugSXu_Rh5ckE4aaOQXKv68lfxKGZ52G60vR9hdoudMyZQZY5nOh9Agq5SqfNf1wQTpXBh8i_OcJDZmeYtzd3VlDL6-1yt8BRVREa2fNRvjO7V1118omeegsx7F4rlIHLAQH5m_haVt3nhDvlPaeAowoysy_a-jMNvGDTkUr0W6KUBR0zd1pvtv0Wu8SjD29jTzjhCekd1gtpCUPsGhd0SAHWNr7lyrYoeLxqfiCv68tq-d3jTA7vPmKouQ4JpmJgcoWH2CPyAZFLaWCkyd8eriyIRQciT0w_pSfK4Wm3jhupLX7KvNq7XzrVDui8zHOt5FXdsCPPgDxI1EvktsawKIo2maVlHgM767wzvKJJysd8MtQ-Q2w6QSm9ixpG7I_WgcYuHBjjKSrhYlWUMEyUPO8D5ZZFaUP7o_tUf0jhDoAq9LyH5hg39mo1PmNp5YIz1IPMLWhEoRXgtkcmLD6uprdj_BK7wJoE7ovECXh7j3CWD6yJA8PZwYeoWXr9jGcBfrypYsR4UlpO68sHGR9_kOvkAZeBmneT&timg=https%3A%2F%2Fss0.bdstatic.com%2F94oJfD_bAAcT8t7mm9GUKT-xh_%2Ftimg%3Fimage%26quality%3D100%26size%3Db4000_4000%26sec%3D1544974817%26di%3D2ed653525122566e2e5fb8a1159b40d1%26src%https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544985001576&di=dd45fcc5da7e2f179c24093181d6bfcd&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F15%2F81%2F16pic_1581010_b.jpg%3A%2F%2Fpic2.16pic.com%2F00%2F15%2F81%2F16pic_1581010_b.jpg");
+            background-size: 100% 100%;
+            perspective: 300px;
+        }
+
+        .container {
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            position: absolute;
+            transform: translateZ(-100deg);
+            transform-style: preserve-3d;
+        }
+
+        .container:hover {
+            animation: spin 5s linear infinite;
+        }
+
+        .side {
+            background: rgba(142,198,63,0.3);
+            border: 2px solid #8ec63f;
+            font-size: 60px;
+            font-weight: bold;
+            color: #fff;
+            height: 196px;
+            line-height: 196px;
+            position: absolute;
+            text-align: center;
+            text-shadow: 0 -1px  0 rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            width: 196px;
+        }
+
+        .front {
+            transform: translateZ(100px);
+        }
+
+        .back {
+            transform: rotateX(180deg) translateZ(100px);
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }   
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="container">
+            <div class="side front">1</div>
+            <div class="side back">2</div>
+            <div class="side left">3</div>
+            <div class="side right">4</div>
+            <div class="side top">5</div>
+            <div class="side bottom">6</div>
+        </div>
+    </div>
+</body>
+</html>
