@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3D变形制作产品展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <style>
+        .wrapper {
+            display: inline-block;
+            width: 310px;
+            height: 100px;
+            vertical-align: top;
+            margin: 1em 1.5em 2em 0;
+            cursor: pointer;
+            position: relative;
+            font-family: Tahoma, Arial;
+            perspective: 4000px;
+        }
+
+        .item {
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: transform .6s;
+        }
+
+        .item img {
+            display: block;
+            position: absolute;
+            top: 0; 
+            border-radius: 3px;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+            transform: translateZ(50px);
+            transition: all .6s;
+        }
+
+        .item .information {
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 80px;
+            width: 290px;
+            text-align: left;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 12px;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+            box-shadow: none;
+            background:rgb(236,241,244);
+            background: linear-gradient(to bottom, rgba(236, 241, 244,1) 0%,rgba(190, 202, 217,1) 100%);
+            transform: rotateX(-90deg) translateZ(50deg);
+            transition: all 0.6s;
+        }
+
+        .item:hover {
+            transform: translateZ(-50px) rotateX(95deg);
+        }
+
+        .item:hover img {
+            box-shadow: none;
+            border-radius: 15px;
+        }
+
+        .item:hover .information {
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">
+            <image src="https://www.baidu.com/link?url=5dEcMATNw5pG3SGuNKNq7Qv2ZLQbCnfpQF-ilD7hUl4IXel-MYun4qHp4bL4BhFbnN_ymtVGY7HQi2PETgDfmbT8074JycLHlzUhnqybhhbQkPJ7TNsBUm2KWRX8SAxS7oQ4r_YfuxtAcGvdMZySI3NsnPUfjDwM957_U7-SLIvPx6eZMu_bE5i0RquHXRuWJNzKDpuvhD4iGzWMWMr-EOE9g4X2Tt69cJB4Wrrf6C2UkJSjmqK4v7WFWEaO7d0oNXevJ5Lx-ioq0CiDWilDtnrc9i25ZpUxIkjg1dhTD9wlFnhftyYCDeiPrM1R7vEKGJTCH_-h4Oh1Zg0ko5325KrVZ0dpkuwrY3MuDGQ3yMf6w75fAIHDMyizKxbgpNXV003wpE-hHXXlg2PrX5USdbL28CgVSKcG8FjhHouuk5aDXuV4UZ6TfywN2ezAGqtCq6aOE6yHXZZiWeLJ9aMKRBZRL8KhAxkC8F-AKZ7tsrKOAdOCPf8Q_wQhXm-AEE3fWu5Wyqhb0gIchfoA4cOqIzxPbBI6q4R421mB_ZUfmDZn8i6CRXS4ihJBqDg6Z_s-O8gGiNj858HPmFVLbW4y3adp6Ptg6WzWBDX4x2MwgDzZYmw1bdPFOn01N6Rqp1sk&timg=https%3A%2F%2Fss0.bdstatic.com%2F94oJfD_bAAcT8t7mm9GUKT-xh_%2Ftimg%3Fimage%26quality%3D100%26size%3Db4000_4000%26sec%3D1544974817%26di%3D847ac15b65114547b462356d08b98c05%26src%3Dhttp%3A%2F%2Fpic7.nipic.com%2F20100505%2F4865525_113030021376_2.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            <span class="information"></span>
+            <strong>Contact Form</strong>this easiest way to add a contact form to your shop.  
+        </div>
+    </div>
+</body>
+</html>
